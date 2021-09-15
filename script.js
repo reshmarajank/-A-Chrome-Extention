@@ -1,17 +1,27 @@
 let myLead=[]
-const inputEl=document.getElementById("input-el");
-let result=document.getElementById("result");
-let listItem=" "
-
+const inputEl=document.getElementById("input-el")
+const   ulEl=document.getElementById("ul-el")
+const tabBtn=document.getElementById("tab-btn")
+const inputBtn=document.getElementById("input-button")
+const deleteBtn=document.getElementById("delete-btn")
 let leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLead"))
+
 if(leadsFromLocalStorage){
 
-        myLead=leadsFromLocalStorage;
-        render(myLead);
+    myLead=leadsFromLocalStorage
+    render(myLead)
 }
 
+tabBtn.addEventListener("click",function(){
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        myLead.push(tabs[0].url);
+        localStorage.setItem("myLeads",JSON.stringify(myLead))
+        render(myLead)
+      })
+})
+
 function render(lead){
-    listItem=" "
+ let   listItem=" "
     for(let i=0;i<lead.length;i++){
     //listItem+= "<li><a href='"+myLead[i]+"'  target='_blank'>"+myLead[i]+"</a></li>"
     listItem +=`
@@ -22,24 +32,34 @@ function render(lead){
     </li>
     `
     }
-    result.innerHTML =listItem}
-
-const inputBtn=document.getElementById("input-button")
-const deleteBtn=document.getElementById("delete-btn")
+    ulEl.innerHTML =listItem}
 
 deleteBtn.addEventListener("dblclick",function(){
-    myLead=[]
-    localStorage.clear()
-    render(myLead)
+        myLead=[]
+        localStorage.clear()
+        render(myLead)
 })
 
 inputBtn.addEventListener("click",function(){
     myLead.push(inputEl.value)
     localStorage.setItem("myLead",JSON.stringify(myLead))
-    console.log( localStorage.getItem("myLead"))
+   
     render(myLead)
     inputEl.value=null;
-    
-    
 }) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

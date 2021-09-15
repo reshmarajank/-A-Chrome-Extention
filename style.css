@@ -1,55 +1,49 @@
-body{
-  
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 50px;
-    
-    margin: 0;
-    padding: 10px;
-    min-width: 400px;
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
 
-}
-    
-    
-#input-el{
-    height: 50px;
-    width: 100%;
-    margin-right: 27px;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-sizing: border-box;
-    border:1px solid #5f9341 ;
-    font-size: medium;
-    font-weight: bold;
-  
-}
-button{
-    height: 33px; 
-    margin-top: 10px;
-    width: 150px;
-    height: 40px;
-    font-weight: bold;
-    font-size: 20px;
-    background-color:#5f9341;
-    color: white;
-    border: 1px solid #5f9341;
-
-    }
-
-#delete-btn{
-    background-color: white;
-    color: #5f9341;
-  
-   
-
-    }
-ul{ margin-top: 20px;
-    list-style: none;
-    padding-left: 0px;
-}
-li{
-    margin-top: 5px;
+  margin: 0;
+  padding: 10px;
+  min-width: 400px;
 }
 
-li a{color:#5f9341 ;
+#input-el {
+  height: 50px;
+  width: 100%;
+  margin-right: 27px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  border: 1px solid #5f9341;
+  font-size: medium;
+  font-weight: bold;
+}
+button {
+  height: 33px;
+  margin-top: 10px;
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #5f9341;
+  color: white;
+  border: 1px solid #5f9341;
+}
 
-    }
+#delete-btn {
+  background-color: white;
+  color: #5f9341;
+}
+ul {
+  margin-top: 20px;
+  list-style: none;
+  padding-left: 0px;
+}
+li {
+  margin-top: 5px;
+}
+
+li a {
+  color: #5f9341;
+}
